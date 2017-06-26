@@ -25,6 +25,9 @@ app.get('/', function(req, res) {
 app.get('/user', function(req,res){
 	res.send("Sono Pippo!")});
 
+app.get('/try', function(req,res){
+	res.send("Questa è una prova")});
+
 // more routes for our API will happen here
 
 // REGISTER OUR ROUTES -------------------------------
