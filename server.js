@@ -5,7 +5,15 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
+var sql = require('mysql');
 
+var dbConfig = sql.createConnection({
+	host : 'localhost',
+	user : 'root',
+	password : 'root',
+	database : 'minishift'
+});
+	
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -27,6 +35,14 @@ app.get('/user', function(req,res){
 
 app.get('/try', function(req,res){
 	res.send("Questa è una prova")});
+
+app.get('/ins', function(req, res){
+	dbConfig.query('SELECT * FROM prova', function(err, result){
+	if(err) throw err;
+	console.log(result);
+	res.send(result);
+	});
+});
 
 // more routes for our API will happen here
 
