@@ -9,8 +9,8 @@ var sql = require('mysql');
 
 var dbConfig = sql.createConnection({
 	host : '127.0.0.1',
-	user : 'dev',
-	password : 'dev',
+	user : 'developer',
+	password : 'developer',
 	database : 'sampledb'
 });
 	
