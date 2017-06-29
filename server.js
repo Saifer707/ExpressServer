@@ -8,10 +8,10 @@ var bodyParser = require('body-parser');
 var sql = require('mysql');
 
 var dbConfig = sql.createConnection({
-	host : 'localhost',
-	user : 'root',
-	password : 'root',
-	database : 'minishift'
+	host : '172.17.0.4',
+	user : 'developer',
+	password : 'developer',
+	database : 'sampledb'
 });
 	
 // configure app to use bodyParser()
