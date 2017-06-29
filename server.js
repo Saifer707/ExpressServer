@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var sql = require('mysql');
 
 var dbConfig = sql.createConnection({
-	host : '172.17.0.6',
+	host : '172.17.0.4',
 	user : 'developer',
 	password : 'developer',
 	database : 'sampledb'
