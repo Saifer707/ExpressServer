@@ -36,6 +36,10 @@ app.get('/user', function(req,res){
 app.get('/try', function(req,res){
 	res.send("Questa è una prova")});
 
+app.get('/up', function(req,res){
+	res.send("Primo aggiornamento")
+});
+
 app.get('/ins', function(req, res){
 	dbConfig.query('SELECT * FROM prova', function(err, result){
 	if(err) throw err;
